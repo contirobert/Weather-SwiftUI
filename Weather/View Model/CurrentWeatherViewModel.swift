@@ -14,7 +14,7 @@ struct CurrentWeatherViewModel {
     let humidity: String
     let precipProbability: String
     let summary: String
-    let icon: UIImage
+    let icon: String
     
     init(model: CurrentWeather) {
         let roundedTemperature = Int(model.temperature)
@@ -27,6 +27,6 @@ struct CurrentWeatherViewModel {
         self.precipProbability = "\(precipPercentValue)%"
         
         self.summary = model.summary
-        self.icon = model.iconImage
+        self.icon = model.icon
     }
 }
