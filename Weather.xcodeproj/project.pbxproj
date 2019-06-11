@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C531355122AF325E005886DA /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C531355022AF325E005886DA /* DailyWeather.swift */; };
 		C5768B6822AF29C0001DC01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5768B6722AF29C0001DC01D /* AppDelegate.swift */; };
 		C5768B6A22AF29C0001DC01D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5768B6922AF29C0001DC01D /* SceneDelegate.swift */; };
 		C5768B6C22AF29C0001DC01D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5768B6B22AF29C0001DC01D /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C531355022AF325E005886DA /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
 		C5768B6422AF29C0001DC01D /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5768B6722AF29C0001DC01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5768B6922AF29C0001DC01D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				C5768B8022AF2A1D001DC01D /* Weather.swift */,
 				C5768B7E22AF2A1D001DC01D /* CurrentWeather.swift */,
+				C531355022AF325E005886DA /* DailyWeather.swift */,
 				C5768B7C22AF2A1D001DC01D /* Coordinate.swift */,
 			);
 			path = Model;
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C531355122AF325E005886DA /* DailyWeather.swift in Sources */,
 				C5768B8522AF2A1D001DC01D /* DarkSkyError.swift in Sources */,
 				C5768B6822AF29C0001DC01D /* AppDelegate.swift in Sources */,
 				C5768B6A22AF29C0001DC01D /* SceneDelegate.swift in Sources */,
