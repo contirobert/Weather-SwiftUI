@@ -28,6 +28,7 @@ class DarkSkyAPIClient {
     
     typealias WeatherCompletionHandler = (Weather?, Error?) -> Void
     typealias CurrentWeatherCompletionHandler = (CurrentWeather?, Error?) -> Void
+    typealias DailyWeatherCompletionHandler = (DailyWeather?, Error?) -> Void
     
     private func getWeather(at coordinate: Coordinate, completionHandler completion: @escaping WeatherCompletionHandler) {
         
@@ -68,6 +69,12 @@ class DarkSkyAPIClient {
     func getCurrentWeather(at coordinate: Coordinate, completionHandler completion: @escaping CurrentWeatherCompletionHandler) {
         getWeather(at: coordinate) { weather, error in
             completion(weather?.currently, error)
+        }
+    }
+    
+    func getDailyWeather(at coordinate: Coordinate, completionHandler completion: @escaping DailyWeatherCompletionHandler) {
+        getWeather(at: coordinate) { weather, error in
+            completion(weather?.daily, error)
         }
     }
 }
