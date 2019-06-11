@@ -9,7 +9,7 @@
 import Foundation
 
 struct DailyWeather: Codable {
-    let time: Int
+    let time: Double
     let temperatureHigh: Double
     let temperatureLow: Double
     let icon: String
