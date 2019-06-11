@@ -9,23 +9,31 @@
 import Foundation
 
 struct DailyWeatherViewModel {
-    let day: String
-    let temperatureHigh: String
-    let temperatureLow: String
-    let icon: String
+    var data: [Data]
+    
+    struct Data {
+        var day: String
+        var temperatureHigh: String
+        var temperatureLow: String
+        var icon: String
+    }
     
     init(model: DailyWeather) {
-        let date = Date(timeIntervalSince1970: model.time)
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE"
-        self.day = formatter.string(from: date)
+        self.data = [Data]()
         
-        let roundedHighTemperature = Int(model.temperatureHigh)
-        self.temperatureHigh = "\(roundedHighTemperature)º"
-        
-        let roundedLowTemperature = Int(model.temperatureLow)
-        self.temperatureLow = "\(roundedLowTemperature)º"
-        
-        self.icon = model.icon
+        for index in 0..<model.data.count {
+            let date = Date(timeIntervalSince1970: model.data[index].time)
+            let formatter = DateFormatter()
+            formatter.dateFormat = "EEEE"
+            self.data[index].day = formatter.string(from: date)
+            
+            let roundedHighTemperature = Int(model.data[index].temperatureHigh)
+            self.data[index].temperatureHigh = "\(roundedHighTemperature)º"
+            
+            let roundedLowTemperature = Int(model.data[index].temperatureLow)
+            self.data[index].temperatureLow = "\(roundedLowTemperature)º"
+            
+            self.data[index].icon = model.data[index].icon
+        }
     }
 }

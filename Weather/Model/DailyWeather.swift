@@ -9,8 +9,12 @@
 import Foundation
 
 struct DailyWeather: Codable {
-    let time: Double
-    let temperatureHigh: Double
-    let temperatureLow: Double
-    let icon: String
+    let data: [Data]
+    
+    struct Data: Codable {
+        var time: Double
+        var temperatureHigh: Double
+        var temperatureLow: Double
+        var icon: String
+    }
 }
