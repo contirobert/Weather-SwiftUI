@@ -11,4 +11,9 @@ import Foundation
 struct Weather: Codable {
     let currently: CurrentWeather
     let daily: DailyWeather
+    
+    init() {
+        self.currently = CurrentWeather()
+        self.daily = DailyWeather()
+    }
 }

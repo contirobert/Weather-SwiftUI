@@ -23,6 +23,7 @@
 		C5768B8422AF2A1D001DC01D /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5768B7E22AF2A1D001DC01D /* CurrentWeather.swift */; };
 		C5768B8522AF2A1D001DC01D /* DarkSkyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5768B7F22AF2A1D001DC01D /* DarkSkyError.swift */; };
 		C5768B8622AF2A1D001DC01D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5768B8022AF2A1D001DC01D /* Weather.swift */; };
+		C5ACDEE422B1B1EB007E6A0F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ACDEE322B1B1EB007E6A0F /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		C5768B7E22AF2A1D001DC01D /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		C5768B7F22AF2A1D001DC01D /* DarkSkyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyError.swift; sourceTree = "<group>"; };
 		C5768B8022AF2A1D001DC01D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		C5ACDEE322B1B1EB007E6A0F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		C53A3F6122AF2CC700D61DA3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C5ACDEE322B1B1EB007E6A0F /* NetworkManager.swift */,
 				C5768B7B22AF2A1D001DC01D /* DarkSkyAPIClient.swift */,
 				C5768B7F22AF2A1D001DC01D /* DarkSkyError.swift */,
 			);
@@ -218,6 +221,7 @@
 				C5768B8422AF2A1D001DC01D /* CurrentWeather.swift in Sources */,
 				C5768B8122AF2A1D001DC01D /* DarkSkyAPIClient.swift in Sources */,
 				C5768B8222AF2A1D001DC01D /* Coordinate.swift in Sources */,
+				C5ACDEE422B1B1EB007E6A0F /* NetworkManager.swift in Sources */,
 				C531355522AF4AD1005886DA /* CurrentWeatherView.swift in Sources */,
 				C531355322AF34CD005886DA /* DailyWeatherViewModel.swift in Sources */,
 				C5768B8322AF2A1D001DC01D /* CurrentWeatherViewModel.swift in Sources */,

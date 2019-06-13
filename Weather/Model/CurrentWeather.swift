@@ -14,4 +14,12 @@ struct CurrentWeather: Codable {
     let precipProbability: Double
     let summary: String
     let icon: String
+    
+    init() {
+        self.temperature = 0
+        self.humidity = 0
+        self.precipProbability = 0
+        self.summary = "Data Unavailable"
+        self.icon = "default"
+    }
 }

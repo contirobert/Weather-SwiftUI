@@ -12,9 +12,13 @@ struct DailyWeather: Codable {
     let data: [Data]
     
     struct Data: Codable {
-        var time: Double
-        var temperatureHigh: Double
-        var temperatureLow: Double
-        var icon: String
+        let time: Double
+        let temperatureHigh: Double
+        let temperatureLow: Double
+        let icon: String
+    }
+    
+    init() {
+        self.data = [Data]()
     }
 }

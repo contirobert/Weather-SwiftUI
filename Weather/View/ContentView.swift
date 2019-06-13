@@ -7,22 +7,22 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView : View {
+    @State var networkManager = NetworkManager()
+    
     var body: some View {
         VStack {
-            Text("Sydney")
-            Text("Sunny")
-            Text("20")
-            
-            VStack {
-                Text("Monday")
-                Text("Monday")
-                Text("Monday")
-                Text("Monday")
-                Text("Monday")
+            Text("Temp: \(networkManager.weather.currently.temperature)")
+            Text("Humidity: \(networkManager.weather.currently.humidity)")
+            Text("Precip: \(networkManager.weather.currently.precipProbability)")
+            Text("Summary: \(networkManager.weather.currently.summary)")
+            Image(networkManager.weather.currently.icon)
+            ForEach(networkManager.weather.daily.data.identified(by: \.time)) {
+                Text("\($0.temperatureHigh)")
             }
-        }
+        }.background(Color.black).colorScheme(.dark)
     }
 }
 
