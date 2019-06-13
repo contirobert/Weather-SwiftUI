@@ -9,7 +9,7 @@
 import Foundation
 
 class DarkSkyAPIClient {
-    fileprivate let darkSkyApiKey = "0b0f2a782a83d039faaf742e76e836b9"
+    fileprivate let darkSkyApiKey = "YOURAPIKEY"
     
     lazy var baseUrl: URL = {
         return URL(string: "https://api.darksky.net/forecast/\(self.darkSkyApiKey)/")!
