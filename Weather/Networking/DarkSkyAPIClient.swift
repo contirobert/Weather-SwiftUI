@@ -30,7 +30,7 @@ class DarkSkyAPIClient {
     typealias CurrentWeatherCompletionHandler = (CurrentWeather?, Error?) -> Void
     typealias DailyWeatherCompletionHandler = (DailyWeather?, Error?) -> Void
     
-    private func getWeather(at coordinate: Coordinate, completionHandler completion: @escaping WeatherCompletionHandler) {
+    func getWeather(at coordinate: Coordinate, completionHandler completion: @escaping WeatherCompletionHandler) {
         
         guard let url = URL(string: coordinate.description, relativeTo: baseUrl) else {
             completion(nil, DarkSkyError.invalidURL)
@@ -71,10 +71,12 @@ class DarkSkyAPIClient {
             completion(weather?.currently, error)
         }
     }
-    
+    /*
+ 
     func getDailyWeather(at coordinate: Coordinate, completionHandler completion: @escaping DailyWeatherCompletionHandler) {
         getWeather(at: coordinate) { weather, error in
             completion(weather?.daily, error)
         }
     }
+     */
 }
