@@ -6,6 +6,7 @@
 //  Copyright © 2019 Bobby Conti. All rights reserved.
 //
 
+
 import SwiftUI
 import Combine
 
@@ -14,15 +15,25 @@ struct ContentView : View {
     
     var body: some View {
         VStack {
-            Text("Temp: \(networkManager.currentWeather.temperature)")
-            Text("Humidity: \(networkManager.currentWeather.humidity)")
-            Text("Precip: \(networkManager.currentWeather.precipProbability)")
-            Text("Summary: \(networkManager.currentWeather.summary)")
-            Image(networkManager.currentWeather.icon)
-            ForEach(networkManager.dailyWeather.data.identified(by: \.day)) {
-                Text("\($0.temperatureHigh)")
+            CurrentWeatherView(data: networkManager.currentWeather)
+                .padding(.top, 60)
+            
+            Spacer()
+            
+            VStack(alignment: .leading) {
+                ForEach(networkManager.dailyWeather.data.identified(by: \.day)) { data in
+                    DailyWeatherRow(data: data)
+                }
             }
-        }.background(Color.black).colorScheme(.dark)
+            
+            Spacer()
+            
+            Image("DarkSkyLogo")
+                .resizable()
+                .aspectRatio(UIImage(named: "DarkSkyLogo")!.size, contentMode: .fit)
+                .frame(width: 120, height: 50)
+        }.background(Color.blue).colorScheme(.dark)
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
