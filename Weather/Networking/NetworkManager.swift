@@ -12,7 +12,13 @@ import Combine
 class NetworkManager: BindableObject {
     var didChange = PassthroughSubject<NetworkManager, Never>()
     
-    var weather = Weather() {
+    var currentWeather = CurrentWeatherViewModel() {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    
+    var dailyWeather = DailyWeatherViewModel() {
         didSet {
             didChange.send(self)
         }
@@ -23,7 +29,8 @@ class NetworkManager: BindableObject {
     init() {
         client.getWeather(at: .newYorkCity) { weather, error in
             if let weather = weather {
-                self.weather = weather
+                self.currentWeather = CurrentWeatherViewModel(model: weather.currently)
+                self.dailyWeather = DailyWeatherViewModel(model: weather.daily)
             }
         }
     }

@@ -15,6 +15,14 @@ struct CurrentWeatherViewModel {
     let summary: String
     let icon: String
     
+    init() {
+        self.temperature = "0"
+        self.humidity = "0%"
+        self.precipProbability = "0%"
+        self.summary = "Data Unavailable"
+        self.icon = "default"
+    }
+    
     init(model: CurrentWeather) {
         let roundedTemperature = Int(model.temperature)
         self.temperature = "\(roundedTemperature)º"
