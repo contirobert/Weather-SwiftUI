@@ -19,6 +19,7 @@ Improves upon the original Weather app using SwiftUI. It allows users to call up
 Additional features were added to the original functionality of the app, including:
 
 - Dynamic UI using SwiftUI
+- Weekly forecast
 - More to come!
 
 ## :white_check_mark: Getting Started
