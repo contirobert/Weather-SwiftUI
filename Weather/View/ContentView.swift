@@ -28,9 +28,9 @@ struct ContentView : View {
             
             Spacer()
             
-            Image("DarkSkyLogo")
+            Image("dark-sky-logo")
                 .resizable()
-                .aspectRatio(UIImage(named: "DarkSkyLogo")!.size, contentMode: .fit)
+                .aspectRatio(UIImage(named: "dark-sky-logo")!.size, contentMode: .fit)
                 .frame(width: 120, height: 50)
         }.background(Color.blue).colorScheme(.dark)
         .edgesIgnoringSafeArea(.top)
