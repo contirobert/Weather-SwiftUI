@@ -17,11 +17,12 @@ struct ContentView: View {
             BackgroundView()
             
             VStack {
-                HeaderView()
+                HeaderView(data: networkManager.currentWeather)
                 
                 Spacer()
                 
                 CurrentWeatherView(data: networkManager.currentWeather)
+                    .padding([.leading, .trailing])
                 
                 Spacer()
                 

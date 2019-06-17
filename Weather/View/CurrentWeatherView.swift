@@ -29,9 +29,30 @@ struct CurrentWeatherView: View {
                     .fontWeight(.ultraLight)
                 
                 VStack(alignment: .leading) {
-                    Text("Humidity: \(data.humidity)")
-                    Text("Precip: \(data.precipProbability)")
-                }
+                    HStack {
+                        Text("FEELS LIKE")
+                        Spacer()
+                        Text(data.apparentTemperature)
+                        }.padding(.bottom, 1)
+                    
+                    HStack {
+                        Text("WIND SPEED")
+                        Spacer()
+                        Text(data.windSpeed)
+                        }.padding(.bottom, 1)
+                    
+                    HStack {
+                        Text("HUMIDITY")
+                        Spacer()
+                        Text(data.humidity)
+                        }.padding(.bottom, 1)
+                    
+                    HStack {
+                        Text("PRECIPITATION")
+                        Spacer()
+                        Text(data.precipProbability)
+                        }.padding(.bottom, 1)
+                    }.font(.caption)
                 }.padding(0)
         }
     }

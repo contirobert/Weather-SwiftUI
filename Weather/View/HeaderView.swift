@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct HeaderView: View {
+    let data: CurrentWeatherViewModel
+
     var body: some View {
         VStack {
             Text("NEW YORK CITY").font(.title).fontWeight(.light)
-            Text("Saturday, June 15").color(.gray)
+            Text(data.time).color(.gray)
         }
     }
 }
