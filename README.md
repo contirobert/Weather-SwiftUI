@@ -10,6 +10,7 @@ Improves upon the original Weather app using SwiftUI. It allows users to call up
 - SwiftUI
 - Stacks
 - Images and Text
+- Gradients
 - Parsing JSON using Codable
 - Error Handling
 - MVVM
@@ -18,9 +19,9 @@ Improves upon the original Weather app using SwiftUI. It allows users to call up
 
 Additional features were added to the original functionality of the app, including:
 
-- Dynamic UI using SwiftUI
-- Weekly forecast
-- More to come!
+- Custom, dynamic UI using SwiftUI
+- Expanded CurrentWeather model including apparent temperature and wind speed
+- Included 5-day forecast
 
 ## :white_check_mark: Getting Started
 
