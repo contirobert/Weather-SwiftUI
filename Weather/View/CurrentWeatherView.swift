@@ -12,14 +12,27 @@ struct CurrentWeatherView: View {
     let data: CurrentWeatherViewModel
     
     var body: some View {
-        VStack {
-            Text("New York City").font(.title)
-            Text(data.summary)
-            Image(data.icon)
-                .resizable()
-                .aspectRatio(UIImage(named: data.icon)!.size, contentMode: .fit)
-                .frame(width: 100, height: 100)
-            Text(data.temperature).font(.system(size: 100))
+        VStack(alignment: .leading) {
+            HStack {
+                Image(data.icon)
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                
+                Text(data.summary)
+                    .font(.title)
+                    .fontWeight(.light)
+                }.padding(0)
+            
+            HStack {
+                Text(data.temperature)
+                    .font(.system(size: 150))
+                    .fontWeight(.ultraLight)
+                
+                VStack(alignment: .leading) {
+                    Text("Humidity: \(data.humidity)")
+                    Text("Precip: \(data.precipProbability)")
+                }
+                }.padding(0)
         }
     }
 }

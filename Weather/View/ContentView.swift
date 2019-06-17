@@ -6,34 +6,30 @@
 //  Copyright © 2019 Bobby Conti. All rights reserved.
 //
 
-
 import SwiftUI
 import Combine
 
-struct ContentView : View {
+struct ContentView: View {
     @State var networkManager = NetworkManager()
     
     var body: some View {
-        VStack {
-            CurrentWeatherView(data: networkManager.currentWeather)
-                .padding(.top, 60)
+        ZStack {
+            BackgroundView()
             
-            Spacer()
-            
-            VStack(alignment: .leading) {
-                ForEach(networkManager.dailyWeather.data.identified(by: \.day)) { data in
-                    DailyWeatherRow(data: data)
-                }
+            VStack {
+                HeaderView()
+                
+                Spacer()
+                
+                CurrentWeatherView(data: networkManager.currentWeather)
+                
+                Spacer()
+                
+                DailyWeatherView(data: networkManager.dailyWeather)
+                
+                FooterView()
             }
-            
-            Spacer()
-            
-            Image("dark-sky-logo")
-                .resizable()
-                .aspectRatio(UIImage(named: "dark-sky-logo")!.size, contentMode: .fit)
-                .frame(width: 120, height: 50)
-        }.background(Color.blue).colorScheme(.dark)
-        .edgesIgnoringSafeArea(.top)
+        }.colorScheme(.dark)
     }
 }
 
