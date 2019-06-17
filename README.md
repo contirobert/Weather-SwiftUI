@@ -52,5 +52,6 @@ The following resources were used in the development of this project. All custom
 
 - [Build a Weather App](https://teamtreehouse.com/library/build-a-weather-app-5)
 - [SwiftUI Fetching JSON and Image Data with BindableObject](https://www.youtube.com/watch?v=xT4wGOc2jd4)
+- Graphics: [Meteocons](https://www.iconfinder.com/iconsets/meteocons) by [Alessio Atzeni](https://www.iconfinder.com/Bluxart)
 
 Interested in learning more about iOS Development? [Sign up today](http://referrals.trhou.se/bobbyconti1)!
