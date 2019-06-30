@@ -3,7 +3,7 @@
 <div style="width: 1000px; height 600px;"><img src="screenshot1.png" width="30%" height="30%" align="right"></div>
 
 
-## :clipboard: Overview
+## Overview
 
 Improves upon the original Weather app using SwiftUI. It allows users to call up the current weather and daily forecast for a particular location using the Dark Sky API. It incorporates:
 
@@ -15,7 +15,7 @@ Improves upon the original Weather app using SwiftUI. It allows users to call up
 - Error Handling
 - MVVM
 
-## :hammer_and_wrench: Custom Features
+## Custom Features
 
 Additional features were added to the original functionality of the app, including:
 
@@ -23,9 +23,9 @@ Additional features were added to the original functionality of the app, includi
 - Expanded CurrentWeather model including apparent temperature and wind speed
 - Included 5-day forecast
 
-## :white_check_mark: Getting Started
+## Getting Started
 
-> :warning: This app is not available on the App Store.
+> This app is not available on the App Store.
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ class DarkSkyAPIClient {
 
 4. Run the simulator
 
-## :clap: Acknowledgements
+## Acknowledgements
 
 The following resources were used in the development of this project. All custom code is my own.
 
