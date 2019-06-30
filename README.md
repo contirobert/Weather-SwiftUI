@@ -5,7 +5,7 @@
 
 ## Overview
 
-Improves upon the original Weather app using SwiftUI. It allows users to call up the current weather and daily forecast for a particular location using the Dark Sky API. It incorporates:
+Weather-SwiftUI is a weather app that uses the Dark Sky API built using SwiftUI! Get the current weather for a particular location and check out the 5-day forecast! The app incorporates:
 
 - SwiftUI
 - Stacks
