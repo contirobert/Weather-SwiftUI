@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    @State var networkManager = NetworkManager()
+    @ObservedObject var networkManager = NetworkManager()
     
     var body: some View {
         ZStack {
