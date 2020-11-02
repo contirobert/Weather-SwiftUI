@@ -14,7 +14,7 @@ struct HeaderView: View {
     var body: some View {
         VStack {
             Text("NEW YORK CITY").font(.title).fontWeight(.light)
-            Text(data.time).color(.gray)
+            Text(data.time).foregroundColor(.gray)
         }
     }
 }

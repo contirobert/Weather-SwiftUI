@@ -9,20 +9,11 @@
 import SwiftUI
 import Combine
 
-class NetworkManager: BindableObject {
-    var didChange = PassthroughSubject<NetworkManager, Never>()
+class NetworkManager: ObservableObject {
     
-    var currentWeather = CurrentWeatherViewModel() {
-        didSet {
-            didChange.send(self)
-        }
-    }
+    @Published var currentWeather = CurrentWeatherViewModel()
     
-    var dailyWeather = DailyWeatherViewModel() {
-        didSet {
-            didChange.send(self)
-        }
-    }
+    @Published var dailyWeather = DailyWeatherViewModel()
     
     let client = DarkSkyAPIClient()
     

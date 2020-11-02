@@ -27,6 +27,7 @@ struct CurrentWeatherView: View {
                 Text(data.temperature)
                     .font(.system(size: 150))
                     .fontWeight(.ultraLight)
+                    .layoutPriority(1)
                 
                 VStack(alignment: .leading) {
                     HStack {
